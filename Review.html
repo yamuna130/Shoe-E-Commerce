@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike - Just Do It</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+  <style>
+    .review {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .review h1 {
+      font-size: 45px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .review h1 span {
+      background: linear-gradient(to left, #c72092, #6c14d0);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-left: 80px;
+    }
+
+    .review_box {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .top-row, .bottom-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .top-row {
+      justify-content: space-between;
+    }
+
+    .bottom-row {
+      justify-content: center;
+      gap: 60px; /* Increased gap between bottom cards */
+    }
+
+    .review_card {
+      background-color: beige;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      width: 400px;
+      margin-right: 100px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .profile_image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .profile_image:hover {
+      transform: scale(1.2);
+    }
+
+    .profile_image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .name {
+      margin-left: 20px;
+    }
+
+    .name strong {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .like i {
+      color: orange;
+      font-size: 12px;
+    }
+
+    .comment p {
+      text-align: justify;
+      line-height: 1.6;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Responsive design */
+    @media (max-width: 1024px) {
+      .top-row, .bottom-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .review_card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+<body>
+  <div class="review" id="Review">
+    <h1><span>Customer's Review</span></h1>
+    <div class="review_box">
+      <!-- Top Row: Three Cards -->
+      <div class="top-row">
+        <div class="review_card">
+          <div class="profile">
+            <div class="profile_image">
+              <img src="image/girl_dp1.jpg" alt="Profile">
+            </div>
+            <div class="name">
+              <strong>Ammu Joe</strong>
+              <div class="like">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+
+        <div class="review_card">
+          <div class="profile">
+            <div class="profile_image">
+              <img src="image/man_dp1.jpg" alt="Profile">
+            </div>
+            <div class="name">
+              <strong>Megha Chocky</strong>
+              <div class="like">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+
+        <div class="review_card">
+          <div class="profile">
+            <div class="profile_image">
+              <img src="image/gir_dp2.jpg" alt="Profile">
+            </div>
+            <div class="name">
+              <strong>Pinky</strong>
+              <div class="like">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Two Cards -->
+      <div class="bottom-row">
+        <div class="review_card">
+          <div class="profile">
+            <div class="profile_image">
+              <img src="image/man_dp2.jpg" alt="Profile">
+            </div>
+            <div class="name">
+              <strong>Manikanta</strong>
+              <div class="like">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+
+        <div class="review_card">
+          <div class="profile">
+            <div class="profile_image">
+              <img src="image/gir_dp3.jpg" alt="Profile">
+            </div>
+            <div class="name">
+              <strong>Divya</strong>
+              <div class="like">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="review_card">
+          <div class="profile">
+            <div class="profile_image">
+              <img src="image/man_dp3.jpg" alt="Profile">
+            </div>
+            <div class="name">
+              <strong>Teja</strong>
+              <div class="like">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

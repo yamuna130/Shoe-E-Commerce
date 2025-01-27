@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes Website</title>
+</head>
+<body>
+<style>
+.about {
+  padding: 20px 40px;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.about h1 span {
+  background: linear-gradient(to left, #c72092, #6c14d0);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 30px;
+}
+
+.about_main {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.about_image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about_image img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #c72092;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about_image img:hover {
+  border-color: #6c14d0;
+  transform: scale(1.05);
+}
+
+.image_container {
+  border: 2px solid #c72092;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.image_container img {
+  width: 700px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.about_text {
+  max-width: 600px;
+  height:45vh;
+  padding: 15px;
+  border: 2px solid #c72092;
+  border-radius: 12px;
+  margin-top:60px;
+}
+
+.about_text p {
+  color:#333;
+  line-height: 1.6;
+  font-family:bold;
+}
+
+.about_btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 10px 25px;
+  border: 2px solid #c72092;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about_btn:hover {
+  background: #c72092;
+  color: white;
+}
+</style>
+<div class="about" id="About">
+  <h1><span>WEB ABOUT</span></h1>
+  <div class="about_main">
+    <div class="about_image">
+      <!-- Using different placeholder images to demonstrate the switching functionality -->
+      <img src="image/red_shoes1.png" onclick="switchImage(this)" alt="Shoe view 1" style="background: linear-gradient(to left, #c72092, #6c14d0)">
+      <img src="image/red_shoes2.png" onclick="switchImage(this)" alt="Shoe view 2" style="background: linear-gradient(to left, #c72092, #6c14d0)">
+      <img src="image/red_shoes3.png" onclick="switchImage(this)" alt="Shoe view 3" style="background: linear-gradient(to left, #c72092, #6c14d0)">
+      <img src="image/red_shoes4.png" onclick="switchImage(this)" alt="Shoe view 4" style="background: linear-gradient(to left, #c72092, #6c14d0)">
+    </div>
+    
+    <div class="image_container">
+      <img src="/api/placeholder/400/300?text=MainView" id="imagebox" alt="Main shoe image">
+    </div>
+    
+    <div class="about_text">
+      <p>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
+         a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
+          discovered the undoubtable source.
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+          If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. 
+          It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,to generate Lorem Ipsum which looks reasonable. 
+          The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words.
+      </p>
+    </div>
+  </div>
+  
+  <a href="Products.html" class="about_btn">Shop Now</a>
+</div>
+
+<script>
+// Enhanced image switching function with smooth transition
+function switchImage(clickedImage) {
+  const mainImage = document.getElementById('imagebox');
+  
+  // Add fade-out effect
+  mainImage.style.opacity = '0';
+  
+  // Switch the image after a short delay for smooth transition
+  setTimeout(() => {
+    mainImage.src = clickedImage.src.replace('80/80', '400/300');
+    mainImage.style.opacity = '1';
+  }, 300);
+}
+
+// Initialize the first image as selected
+document.addEventListener('DOMContentLoaded', () => {
+  const firstThumbnail = document.querySelector('.about_image img');
+  if (firstThumbnail) {
+    switchImage(firstThumbnail);
+  }
+});
+</script>
+</body>
+</html>
